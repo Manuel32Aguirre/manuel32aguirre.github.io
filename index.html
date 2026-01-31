@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Aguirre | Portafolio</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --text: #f8fafc;
+            --accent: #38bdf8;
+            --secondary: #94a3b8;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            padding: 2rem;
+            text-align: center;
+        }
+        h1 { font-size: 3rem; margin-bottom: 0.5rem; color: var(--accent); }
+        .subtitle { font-size: 1.2rem; color: var(--secondary); margin-bottom: 2rem; }
+        .section { margin-bottom: 3rem; }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .skill-card {
+            background: #1e293b;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+        .project-card {
+            text-align: left;
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent);
+        }
+        a { color: var(--accent); text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="section">
+            <h1>Manuel Aguirre</h1>
+            <p class="subtitle">Ingeniero en Sistemas Computacionales | Backend Specialist</p>
+            <p>Apasionado por la Arquitectura Limpia, el despliegue en la nube y la creación de soluciones escalables.</p>
+        </header>
+
+        <hr style="border: 0; border-top: 1px solid #334155; margin-bottom: 3rem;">
+
+        <section class="section">
+            <h3>🚀 Tecnologías</h3>
+            <div class="skills-grid">
+                <div class="skill-card">Java / Spring Boot</div>
+                <div class="skill-card">Docker & Azure</div>
+                <div class="skill-card">Python & Node.js</div>
+                <div class="skill-card">SQL / NoSQL</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3>📂 Proyectos Destacados</h3>
+            <div class="project-card">
+                <h4>EtheriaVR</h4>
+                <p>Plataforma de composición musical en Realidad Virtual. Integrando tecnología y arte.</p>
+            </div>
+            <div class="project-card">
+                <h4>Rhythm Hero</h4>
+                <p>Desarrollo de videojuego rítmico explorando mecánicas interactivas.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Conéctate conmigo: <a href="https://github.com/manuel32aguirre">GitHub</a> | <a href="#">LinkedIn</a></p>
+        </footer>
+    </div>
+</body>
+</html>
