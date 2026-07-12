@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EtheriaVR | Manuel Aguirre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/additional-styles.css">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .image-with-caption {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(79, 172, 254, 0.2);
+        }
+        .image-with-caption img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .image-with-caption:hover img {
+            transform: scale(1.05);
+        }
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 1.5rem 1rem;
+            color: white;
+            font-weight: 600;
+        }
+        .feature-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .feature-description {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .tech-section {
+            background: rgba(10, 14, 39, 0.5);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .architecture-box {
+            background: rgba(79, 172, 254, 0.1);
+            border-left: 4px solid #00d4ff;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        .btn-accent {
+            background: linear-gradient(135deg, #00d4ff, #4facfe);
+            border: none;
+            color: white !important;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-accent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="fas fa-arrow-left me-2"></i>Volver al Portafolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="project-hero" style="padding-top: 120px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="hero-content text-center text-white">
+                <span class="badge bg-dark bg-opacity-75 mb-3" style="font-size: 1rem;">Proyecto 2025-2026</span>
+                <h1 class="display-2 fw-bold mb-3">EtheriaVR</h1>
+                <p class="lead mb-4" style="font-size: 1.3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Plataforma inmersiva de entrenamiento musical en Meta Quest 3 con procesamiento de audio en tiempo real y MIDI de latencia mínima
+                </p>
+                <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+                    <span class="badge bg-dark bg-opacity-75">FastAPI</span>
+                    <span class="badge bg-dark bg-opacity-75">Python</span>
+                    <span class="badge bg-dark bg-opacity-75">C#</span>
+                    <span class="badge bg-dark bg-opacity-75">Meta Quest 3</span>
+                    <span class="badge bg-dark bg-opacity-75">Yin Algorithm</span>
+                    <span class="badge bg-dark bg-opacity-75">MIDI USB-C</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acerca del Proyecto -->
+    <section class="section-padding bg-dark">
+        <div class="container">
+            <div class="row align-items-center mb-5" style="margin: 3rem 0;">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="image-with-caption" style="height: 400px;">
+                        <img src="../../img/repertorioMusical.jpeg" alt="EtheriaVR Interface" style="object-fit: cover;">
+                        <div class="caption">Interfaz del Repertorio Musical</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-text">
+                        <h3 class="text-accent">¿Qué es EtheriaVR?</h3>
+                        <p class="feature-description">
+                            EtheriaVR es una plataforma inmersiva de entrenamiento musical desarrollada para Meta Quest 3. Combina VR, procesamiento de audio avanzado y entrada MIDI de latencia mínima para revolucionar el aprendizaje musical.
+                        </p>
+                        <p class="feature-description">
+                            La arquitectura integra: backend FastAPI con MySQL, cliente Python en PC para comunicación UDP, procesamiento de audio con algoritmo Yin en C#, y Meta Quest 3 como interfaz inmersiva con passthrough y hand tracking.
+                        </p>
+                        <ul class="feature-list">
+                            <li>MIDI directo USB-C conectado a las gafas con latencia mínima</li>
+                            <li>Procesamiento de frecuencia fundamental con algoritmo Yin</li>
+                            <li>Comparación de tono, tiempo y cents de afinación</li>
+                            <li>Público virtual que reacciona en tiempo real (aplaude, grita, baila)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características Principales -->
+    <section class="section-padding bg-darker">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-accent mb-3" style="font-size: 2.5rem;">Características Principales</h2>
+                <p class="text-white-50 mb-0" style="font-size: 1.1rem;">Descubre cómo EtheriaVR transforma el entrenamiento musical</p>
+            </div>
+
+            <!-- Feature 1 -->
+            <div class="row align-items-center" style="margin: 4rem 0;">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <div class="image-with-caption" style="height: 350px;">
+                        <img src="../../img/ConexionMidiTecladoFisicoEntradaUsbBaC.jpeg" alt="Conexión MIDI" style="object-fit: cover;">
+                        <div class="caption">MIDI USB-C directo a Meta Quest 3</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h4 class="text-accent mb-3"><i class="fas fa-music me-2"></i>Entrada MIDI Directa USB-C</h4>
+                    <p class="text-white-50 mb-3">
+                        El teclado MIDI se conecta directamente a Meta Quest 3 mediante USB-C, logrando latencia mínima imperceptible. No hay intermediarios: los datos van directo del instrumento al procesador.
+                    </p>
+                    <p class="text-white-50">
+                        Cada nota, pulsación y cambio de parámetro se captura en tiempo real y se procesa inmediatamente en C# para renderizar el pentagrama dinámico con retroalimentación visual instantánea.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="row align-items-center" style="margin: 4rem 0;">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="image-with-caption" style="height: 350px;">
+                        <img src="../../img/practicaPianoPentagramaPasandoPublicoReaccionando.jpeg" alt="Práctica Piano" style="object-fit: cover;">
+                        <div class="caption">Público reaccionando en tiempo real</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="text-accent mb-3"><i class="fas fa-vr-cardboard me-2"></i>Experiencia Inmersiva Meta Quest 3</h4>
+                    <p class="text-white-50 mb-3">
+                        En Meta Quest 3 ves el pentagrama musical en VR mientras tocas. El público virtual reacciona en tiempo real: aplaude, grita, baila si lo haces bien; se silencia y apaga si cometes errores.
+                    </p>
+                    <p class="text-white-50">
+                        Passthrough permite ver el teclado real a través de la VR. Hand tracking automático y posibilidad de trazar áreas del mundo real para referencias visuales durante la práctica.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="row align-items-center" style="margin: 4rem 0;">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <div class="image-with-caption" style="height: 350px;">
+                        <img src="../../img/PuntajesGlobalesGraficasPracticaDePiano.jpeg" alt="Análisis" style="object-fit: cover;">
+                        <div class="caption">Puntuación y análisis de progreso</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h4 class="text-accent mb-3"><i class="fas fa-chart-line me-2"></i>Análisis Profundo con Yin Algorithm</h4>
+                    <p class="text-white-50 mb-3">
+                        El algoritmo Yin detecta la frecuencia fundamental de cada nota. Se compara automáticamente: tono exacto, tiempo de duración, cents de afinación (sube o baja del usuario).
+                    </p>
+                    <p class="text-white-50">
+                        Cada sesión genera puntuación y gráficas de progreso almacenadas en la BD MySQL. Visualiza tu desarrollo a través del tiempo con métricas precisas de precisión y consistencia técnica.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demostrativo: Video -->
+    <section class="section-padding bg-dark">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-accent mb-3" style="font-size: 2.5rem;">Demo del Sistema</h2>
+                <p class="text-white-50 mb-0" style="font-size: 1.1rem;">Mira cómo funciona EtheriaVR en tiempo real</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <video controls style="width: 100%; border-radius: 15px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);">
+                        <source src="../../img/FuncionamientoDelSistemaPequenaMuestraDeModoPiano.mp4" type="video/mp4">
+                        Tu navegador no soporta video HTML5
+                    </video>
+                    <p class="text-center text-white-50 mt-3">Muestra del funcionamiento del sistema en modo piano</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arquitectura Técnica -->
+    <section class="section-padding bg-darker">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-accent mb-3" style="font-size: 2.5rem;">Arquitectura Técnica</h2>
+                <p class="text-white-50 mb-0" style="font-size: 1.1rem;">Cómo está construido EtheriaVR</p>
+            </div>
+
+            <div class="row g-4 my-5">
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-section text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">
+                            <i class="devicon-python-plain colored"></i>
+                        </div>
+                        <h5 class="text-accent mb-3">Backend FastAPI</h5>
+                        <p class="text-white-50 small mb-3">
+                            FastAPI proporciona APIs de alto rendimiento con validación automática, async/await nativo y documentación Swagger.
+                        </p>
+                        <ul class="text-white-50 small" style="text-align: left; padding-left: 1rem;">
+                            <li>FastAPI para APIs REST ultra rápidas</li>
+                            <li>SQLAlchemy para ORM y persistencia</li>
+                            <li>Uvicorn como servidor ASGI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-section text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">
+                            <i class="devicon-python-plain colored"></i>
+                        </div>
+                        <h5 class="text-accent mb-3">Cliente UDP Python</h5>
+                        <p class="text-white-50 small mb-3">
+                            Cliente Python en PC que captura audio y actúa como puente entre audio y Meta Quest 3.
+                        </p>
+                        <ul class="text-white-50 small" style="text-align: left; padding-left: 1rem;">
+                            <li>UDP para comunicación de baja latencia</li>
+                            <li>Procesamiento de señal de audio</li>
+                            <li>Transmisión a Meta Quest 3 en red local</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-section text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">
+                            <i class="fas fa-headset" style="color: #00d4ff;"></i>
+                        </div>
+                        <h5 class="text-accent mb-3">Meta Quest 3 C#</h5>
+                        <p class="text-white-50 small mb-3">
+                            Aplicación en C# para Meta Quest 3 con procesamiento de audio avanzado y renderización VR.
+                        </p>
+                        <ul class="text-white-50 small" style="text-align: left; padding-left: 1rem;">
+                            <li>Algoritmo Yin para frecuencia fundamental</li>
+                            <li>Passthrough y hand tracking</li>
+                            <li>Renderizado de pentagrama en tiempo real</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-section text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">
+                            <i class="fas fa-link" style="color: #00d4ff;"></i>
+                        </div>
+                        <h5 class="text-accent mb-3">Comunicación</h5>
+                        <p class="text-white-50 small mb-3">
+                            APIs REST para datos, MIDI USB-C directo, UDP para audio, todos en red local.
+                        </p>
+                        <ul class="text-white-50 small" style="text-align: left; padding-left: 1rem;">
+                            <li>REST para CRUD de datos</li>
+                            <li>MIDI USB-C de latencia mínima</li>
+                            <li>UDP para streaming de audio</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="architecture-box">
+                <h5 class="text-accent mb-3"><i class="fas fa-network-wired me-2"></i>Flujo de Datos</h5>
+                <p class="text-white-50 mb-3">
+                    <strong>1. Entrada MIDI:</strong> Teclado MIDI conectado directamente a Meta Quest 3 vía USB-C. Latencia mínima sin intermediarios.
+                </p>
+                <p class="text-white-50 mb-3">
+                    <strong>2. Procesamiento en C#:</strong> Meta Quest 3 procesa MIDI, aplica algoritmo Yin para detectar frecuencia fundamental, compara tono/tiempo/cents.
+                </p>
+                <p class="text-white-50 mb-3">
+                    <strong>3. Audio UDP:</strong> Cliente Python en PC captura audio, lo envía por UDP a Meta Quest 3. Comunicación de baja latencia en red local.
+                </p>
+                <p class="text-white-50">
+                    <strong>4. Backend FastAPI:</strong> Almacena resultados de sesiones en MySQL, retorna gráficas y análisis. Dockerizado para despliegue.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="section-padding bg-dark">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-accent mb-3" style="font-size: 2.5rem;">Galería del Proyecto</h2>
+                <p class="text-white-50 mb-0" style="font-size: 1.1rem;">Más capturas del desarrollo</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../../img/repertorioMusical.jpeg" alt="Repertorio Musical">
+                </div>
+                <div class="gallery-item">
+                    <img src="../../img/InfoDispositivoMIDI.jpeg" alt="Dispositivo MIDI">
+                </div>
+                <div class="gallery-item">
+                    <img src="../../img/PracticaCantoSeVeLaLetraDeLaCancionYElPublicoReaccionando.jpeg" alt="Práctica Canto">
+                </div>
+                <div class="gallery-item">
+                    <img src="../../img/deteccionTessituraMusical.jpeg" alt="Detección Tessitura">
+                </div>
+                <div class="gallery-item">
+                    <img src="../../img/PausaJuegoContinuarSeVeElTecladoFisicoPasstrough.jpeg" alt="Controles">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack Detallado -->
+    <section class="section-padding bg-darker">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-accent mb-3" style="font-size: 2.5rem;">Stack Tecnológico Detallado</h2>
+                <p class="text-white-50 mb-0" style="font-size: 1.1rem;">Tecnologías y herramientas utilizadas</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="tech-section">
+                        <h5 class="text-accent mb-3"><i class="devicon-python-plain colored me-2"></i>Backend</h5>
+                        <ul class="list-unstyled text-white-50">
+                            <li class="mb-2">✓ <strong>FastAPI:</strong> Framework web asincrónico de ultra alto rendimiento</li>
+                            <li class="mb-2">✓ <strong>SQLAlchemy:</strong> ORM para abstracción de BD relacional</li>
+                            <li class="mb-2">✓ <strong>Uvicorn:</strong> Servidor ASGI para aplicaciones async</li>
+                            <li class="mb-2">✓ <strong>MySQL:</strong> Base de datos relacional para datos de sesiones</li>
+                            <li class="mb-2">✓ <strong>Docker:</strong> Containerización para reproducibilidad</li>
+                            <li class="mb-2">✓ <strong>Swagger/OpenAPI:</strong> Documentación automática de APIs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="tech-section">
+                        <h5 class="text-accent mb-3"><i class="fas fa-headset me-2" style="color: #00d4ff;"></i>Meta Quest 3 & Cliente Desktop</h5>
+                        <ul class="list-unstyled text-white-50">
+                            <li class="mb-2">✓ <strong>C# (Meta Quest 3):</strong> Procesamiento de audio y renderización VR</li>
+                            <li class="mb-2">✓ <strong>Yin Algorithm:</strong> Detección de frecuencia fundamental</li>
+                            <li class="mb-2">✓ <strong>Python UDP Client:</strong> Puente de audio PC ↔ Meta</li>
+                            <li class="mb-2">✓ <strong>MIDI USB-C Directo:</strong> Latencia mínima imperceptible</li>
+                            <li class="mb-2">✓ <strong>Passthrough + Hand Tracking:</strong> Integración del mundo real</li>
+                            <li class="mb-2">✓ <strong>Pentagrama Dinámico:</strong> Renderizado en tiempo real</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="tech-section">
+                        <h5 class="text-accent mb-3"><i class="fas fa-server me-2" style="color: #00d4ff;"></i>DevOps & Infraestructura</h5>
+                        <ul class="list-unstyled text-white-50">
+                            <li class="mb-2">✓ <strong>Docker:</strong> Containerización de FastAPI + MySQL</li>
+                            <li class="mb-2">✓ <strong>Docker Compose:</strong> Orquestación de servicios (API + BD)</li>
+                            <li class="mb-2">✓ <strong>Red Local UDP:</strong> Comunicación de baja latencia</li>
+                            <li class="mb-2">✓ <strong>MySQL Database:</strong> Almacenamiento persistente de sesiones</li>
+                            <li class="mb-2">✓ <strong>GitHub:</strong> Control de versiones</li>
+                            <li class="mb-2">✓ <strong>Git Bash:</strong> Terminal para desarrollo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="tech-section">
+                        <h5 class="text-accent mb-3"><i class="fas fa-wrench me-2" style="color: #00d4ff;"></i>Herramientas de Desarrollo</h5>
+                        <ul class="list-unstyled text-white-50">
+                            <li class="mb-2">✓ <strong>Visual Studio Code:</strong> Editor para Python y backend</li>
+                            <li class="mb-2">✓ <strong>Visual Studio Community:</strong> IDE para C# y Meta Quest</li>
+                            <li class="mb-2">✓ <strong>Meta Quest Developer Hub:</strong> Depuración en VR</li>
+                            <li class="mb-2">✓ <strong>Postman:</strong> Testing de APIs FastAPI</li>
+                            <li class="mb-2">✓ <strong>MySQL Workbench:</strong> Diseño y gestión de BD</li>
+                            <li class="mb-2">✓ <strong>PyCharm:</strong> IDE para desarrollo Python</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventajas -->
+    <section class="section-padding bg-dark">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-accent mb-3" style="font-size: 2.5rem;">¿Por qué esta arquitectura?</h2>
+                <p class="text-white-50 mb-0" style="font-size: 1.1rem;">Beneficios técnicos y pedagógicos</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-section text-center p-4">
+                        <i class="fas fa-bolt text-accent" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <h5 class="text-accent mb-3">Latencia Mínima</h5>
+                        <p class="text-white-50">
+                            MIDI USB-C directo + UDP local + C# en Meta = latencia imperceptible. Mejor experiencia de tiempo real posible.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-section text-center p-4">
+                        <i class="fas fa-waveform-lines text-accent" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <h5 class="text-accent mb-3">Análisis Preciso</h5>
+                        <p class="text-white-50">
+                            Algoritmo Yin detecta frecuencia fundamental con precisión. Comparación exacta de tono, tiempo y cents de afinación.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-section text-center p-4">
+                        <i class="fas fa-infinity text-accent" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <h5 class="text-accent mb-3">Escalabilidad</h5>
+                        <p class="text-white-50">
+                            FastAPI async + MySQL containerizado con Docker. Arquitectura lista para crecer sin problemas de rendimiento.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="tech-section text-center p-4">
+                        <i class="fas fa-vr-cardboard text-accent" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <h5 class="text-accent mb-3">Experiencia Inmersiva</h5>
+                        <p class="text-white-50">
+                            Meta Quest 3 con passthrough, hand tracking y público virtual que reacciona. Aprendizaje musical del futuro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="section-padding bg-darker">
+        <div class="container text-center">
+            <h2 class="text-accent mb-3" style="font-size: 2.5rem;">¿Quieres conocer más?</h2>
+            <p class="text-white-50 mb-4" style="font-size: 1.1rem;">Visita el repositorio para ver el código completo</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="https://github.com/Manuel32Aguirre/EtheriaVR" target="_blank" class="btn btn-accent btn-lg px-5">
+                    <i class="fab fa-github me-2"></i>Ver Repositorio
+                </a>
+                <a href="../../index.html" class="btn btn-outline-light btn-lg px-5">
+                    <i class="fas fa-arrow-left me-2"></i>Volver al Portafolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
